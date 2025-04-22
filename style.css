@@ -317,4 +317,14 @@ body {
     font-size: 2em;
     letter-spacing: 2px;
   }
+
+  .nova-secao {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .lado-esquerdo-vermelho,
+  .lado-direito-branco {
+    padding: 30px 20px;
+  }
 }
