@@ -5,35 +5,40 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Cabeçalho */
 .cabecalho {
   background-color: rgb(223, 92, 17);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 100vw; /* força ocupar toda a largura da janela */
-  box-sizing: border-box;
+  width: 100%;
 }
 
+/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: nowrap;
 }
 
 .logo__cabecalho {
   color: white;
   font-size: 60px;
   font-family: "Kanit", sans-serif;
-  margin: 0;
   white-space: nowrap;
+  line-height: 1;
 }
 
 .subtitulo {
@@ -42,35 +47,9 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
-/* Divisão de fundo azul e vermelho */
-.divisao-fundo {
-  display: flex;
-  height: 100vh;
-}
-
-.lado-esquerdo,
-.lado-direito {
-  flex: 1;
-}
-
-.lado-esquerdo {
-  background-color: #002B5B; /* Azul */
-}
-
-.lado-direito {
-  background-color: #a70606; /* Vermelho */
-}
-
-/* Resto do layout */
-.imagem-estudante {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-}
-
+/* Botão */
 .btn-comecar {
   background-color: white;
   color: rgb(223, 92, 17);
@@ -80,10 +59,11 @@ body {
   font-size: 1.2em;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .btn-comecar:hover {
@@ -91,25 +71,45 @@ body {
   color: white;
 }
 
+/* Seção azul/vermelha */
+.divisao-fundo {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.lado-esquerdo,
+.lado-direito {
+  flex: 1;
+  height: 100%;
+}
+
+.lado-esquerdo {
+  background-color: #002B5B;
+}
+
+.lado-direito {
+  background-color: #a70606;
+}
+
 .Na_youc {
   font-family: "Montserrat", sans-serif;
   font-size: 4em;
   color: white;
   text-align: left;
-  padding-left: 50px;
-  padding-top: 150px;
+  padding: 150px 50px 0;
   letter-spacing: 2px;
   line-height: 1.2;
   font-weight: 600;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Cards */
 .titulo-cursos {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 4em;
-  margin-bottom: 60px;
-  margin-top: 20px;
+  margin: 20px 0 60px;
   color: #333;
   text-transform: uppercase;
   font-weight: 700;
@@ -126,7 +126,6 @@ body {
   width: 250px;
   border-radius: 20px;
   padding: 30px 20px;
-  color: #fff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -138,14 +137,12 @@ body {
 .card h3 {
   margin: 20px 0 10px;
   font-size: 1.4em;
-  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .card p {
   font-size: 1em;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .card .icone img {
@@ -153,21 +150,11 @@ body {
   height: 50px;
 }
 
-.card.amarelo {
-  background-color: #f7c948;
-  color: #333;
-}
+.card.amarelo { background-color: #f7c948; color: #333; }
+.card.azul { background-color: #2b6cb0; color: white; }
+.card.vermelho { background-color: #a70606; color: white; }
 
-.card.azul {
-  background-color: #2b6cb0;
-  color: white;
-}
-
-.card.vermelho {
-  background-color: #a70606;
-  color: white;
-}
-
+/* Seção "Por que escolher" */
 .por-que-escolher {
   background-color: white;
   padding: 80px 20px 60px;
@@ -211,7 +198,6 @@ body {
 .motivo h3 {
   font-size: 22px;
   margin-top: 20px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #333;
 }
@@ -220,18 +206,18 @@ body {
   font-size: 16px;
   margin-top: 10px;
   color: #555;
-  font-family: 'Montserrat', sans-serif;
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Nova seção */
 .nova-secao {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px 0 100px;
+  width: 100%;
 }
 
 .lado-esquerdo-vermelho,
@@ -243,9 +229,8 @@ body {
   align-items: center;
 }
 
-/* Cores de fundo das seções */
 .lado-esquerdo-vermelho {
-  background-color: #a70606; /* Vermelho */
+  background-color: #a70606;
 }
 
 .lado-direito-branco {
@@ -253,7 +238,6 @@ body {
 }
 
 .titulo-esquerdo {
-  font-family: 'Montserrat', sans-serif;
   font-size: 3em;
   font-weight: 600;
   text-align: center;
@@ -270,7 +254,6 @@ body {
   border: none;
   padding: 25px 40px;
   font-size: 1.5em;
-  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   border-radius: 25px;
   transition: background-color 0.3s ease;
@@ -280,15 +263,31 @@ body {
   background-color: #8e0505;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsivo - sem empilhamento */
 @media (max-width: 768px) {
+  .cabecalho {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .logo-container {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
   .logo__cabecalho {
-    font-size: 60px;
+    font-size: 45px;
   }
 
   .btn-comecar {
-    padding: 12px 20px;
     font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  .divisao-fundo {
+    flex-direction: row;
+    height: auto;
   }
 
   .Na_youc {
@@ -296,29 +295,9 @@ body {
     padding: 40px 20px;
   }
 
-  .titulo-cursos {
-    font-size: 2.5em;
-  }
-
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
   .nova-secao {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .lado-esquerdo-vermelho,
-  .lado-direito-branco {
-    padding: 30px 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .titulo-esquerdo {
@@ -326,12 +305,14 @@ body {
     letter-spacing: 2px;
   }
 
-  .motivos-container {
-    flex-direction: column;
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .motivo {
-    flex: 1 1 100%;
-    max-width: none;
+  .motivos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
