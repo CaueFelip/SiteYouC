@@ -19,18 +19,17 @@ body {
 .cabecalho {
   background-color: rgb(223, 92, 17);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: relative;
+  justify-content: center; /* Centralizar o conteúdo */
+  align-items: center; /* Alinhar os itens verticalmente */
+  padding: 20px 10px;
 }
 
 /* Logo */
 .logo-container {
   display: flex;
-  flex-direction: row; /* Garantir que a logo e o subtítulo fiquem lado a lado */
-  align-items: center; /* Alinhar verticalmente os itens */
-  gap: 10px; /* Ajuste do espaçamento entre a logo e o subtítulo */
+  flex-direction: row; /* Assegurar que logo e subtítulo fiquem lado a lado */
+  align-items: center; /* Alinhamento vertical */
+  gap: 5px; /* Pequeno espaço entre "You" e "C" */
 }
 
 .logo__cabecalho {
@@ -46,27 +45,27 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  margin-left: 0;
 }
 
 /* Ajustes para mobile */
 @media (max-width: 768px) {
   .cabecalho {
-    flex-direction: column; /* Alinhar logo e subtítulo verticalmente em telas menores */
-    align-items: center; /* Centralizar o conteúdo */
+    flex-direction: column; /* Organizar o conteúdo em coluna no mobile */
+    align-items: center; /* Centralizar todos os itens */
   }
 
   .logo__cabecalho {
-    font-size: 80px; /* Ajuste no tamanho da logo para mobile */
+    font-size: 80px; /* Ajustar o tamanho da logo no mobile */
   }
 
   .subtitulo {
-    font-size: 20px; /* Reduzir o tamanho do subtítulo para mobile */
-    text-align: center; /* Centralizar o subtítulo */
+    font-size: 20px; /* Reduzir o tamanho do subtítulo */
+    text-align: center; /* Centralizar o subtítulo no mobile */
+    margin-top: 10px; /* Um pouco de espaço entre a logo e o subtítulo */
   }
 
   .logo-container {
-    gap: 5px; /* Reduzir o gap entre o "You" e o "C" no mobile */
+    gap: 10px; /* Garantir espaçamento adequado entre a logo e o subtítulo */
   }
 }
 
