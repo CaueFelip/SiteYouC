@@ -1,27 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
+/* Reset global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   overflow-x: hidden;
 }
 
+/* Cabeçalho */
 .cabecalho {
   background-color: rgb(223, 92, 17);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px;
+  position: relative; /* Garantir que ele fique acima de outros elementos */
+  z-index: 10; /* Garantir que o cabeçalho apareça por cima dos outros elementos */
 }
 
+/* Logo */
 .logo-container {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  padding-left: 0;
 }
 
 .logo__cabecalho {
@@ -32,47 +41,34 @@ body {
 }
 
 .subtitulo {
-  color: white;
-  font-size: 30px;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  margin-left: -10px;
 }
 
+/* Divisão de fundo azul e vermelho */
 .divisao-fundo {
   display: flex;
-  flex-wrap: wrap;
-  height: auto;
+  height: 100vh;
 }
 
 .lado-esquerdo,
 .lado-direito {
-  flex: 1 1 100%;
-}
-
-@media (min-width: 769px) {
-  .lado-esquerdo,
-  .lado-direito {
-    flex: 1;
-  }
+  flex: 1;
 }
 
 .lado-esquerdo {
-  background-color: #002B5B;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  background-color: #002B5B; /* Azul */
 }
 
 .lado-direito {
-  background-color: #a70606;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #a70606; /* Vermelho */
 }
 
+/* Resto do layout */
 .imagem-estudante {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 10px;
 }
@@ -98,12 +94,12 @@ body {
 }
 
 .Na_youc {
-  font-family: "poppins", sans-serif;
-  font-size: 2.5em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4em;
   color: white;
   text-align: left;
-  padding-left: 30px;
-  padding-top: 50px;
+  padding-left: 50px;
+  padding-top: 150px;
   letter-spacing: 2px;
   line-height: 1.2;
   font-weight: 600;
@@ -124,15 +120,14 @@ body {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 30px;
 }
 
 .card {
-  width: 100%;
-  max-width: 300px;
+  width: 250px;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px 20px;
   color: #fff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -193,7 +188,7 @@ body {
 .motivos-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
 }
 
@@ -202,7 +197,8 @@ body {
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  flex: 1 1 200px; /* Faz os motivos ocuparem o mesmo espaço */
+  flex: 1 1 200px;
+  max-width: 300px;
 }
 
 .motivo:hover {
@@ -232,65 +228,42 @@ body {
   margin-right: auto;
 }
 
-
-@media (max-width: 768px) {
-  .motivos-container {
-    flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
-  }
-  
-  .motivo {
-    flex: 1 1 100%; /* Faz os motivos ocupar a largura inteira em telas pequenas */
-    max-width: none; /* Remove qualquer largura máxima no mobile */
-  }
-}
-
-
 .nova-secao {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 100px;
 }
 
-@media (min-width: 768px) {
-  .nova-secao {
-    flex-direction: row;
-    height: 450px;
-  }
-}
-
-.lado-esquerdo-vermelho {
+.lado-esquerdo-vermelho,
+.lado-direito-branco {
   flex: 1;
-  background-color: #a70606;
-  color: white;
-  padding: 40px;
+  padding: 30px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Cores de fundo das seções */
+.lado-esquerdo-vermelho {
+  background-color: #a70606; /* Vermelho */
 }
 
 .lado-direito-branco {
-  flex: 1;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .titulo-esquerdo {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   line-height: 1.3;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  max-width: 90%;
-  margin: 0 auto;
 }
 
 .btn-contact-us {
@@ -309,6 +282,7 @@ body {
   background-color: #8e0505;
 }
 
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .logo__cabecalho {
     font-size: 60px;
@@ -324,14 +298,19 @@ body {
     padding: 40px 20px;
   }
 
-  .btn-contact-us {
-    font-size: 1.2em;
-    padding: 15px 30px;
+  .titulo-cursos {
+    font-size: 2.5em;
   }
 
-  .titulo-esquerdo {
-    font-size: 2em;
-    letter-spacing: 2px;
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .nova-secao {
@@ -342,5 +321,19 @@ body {
   .lado-esquerdo-vermelho,
   .lado-direito-branco {
     padding: 30px 20px;
+  }
+
+  .titulo-esquerdo {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .motivos-container {
+    flex-direction: column;
+  }
+
+  .motivo {
+    flex: 1 1 100%;
+    max-width: none;
   }
 }
