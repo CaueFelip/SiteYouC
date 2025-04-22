@@ -98,7 +98,7 @@ body {
 }
 
 .Na_youc {
-  font-family: "Montserrat", sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 2.5em;
   color: white;
   text-align: left;
@@ -230,6 +230,18 @@ body {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+@media (max-width: 768px) {
+  .motivos-container {
+    flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
+  }
+  
+  .motivo {
+    flex: 1 1 100%; /* Faz os motivos ocupar a largura inteira em telas pequenas */
+    max-width: none; /* Remove qualquer largura máxima no mobile */
+  }
 }
 
 
