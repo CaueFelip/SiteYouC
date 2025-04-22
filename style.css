@@ -29,8 +29,8 @@ body {
 /* Logo */
 .logo-container {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center; /* Alinhar verticalmente os itens */
+  gap: 8px; /* Reduzir o gap entre o "You" e o "C" */
 }
 
 .logo__cabecalho {
@@ -38,6 +38,26 @@ body {
   font-size: 100px;
   font-family: "Special Gothic Expanded One", sans-serif;
   margin: 0;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 10px; /* Ajuste para melhorar a separação entre logo e subtítulo */
+}
+
+/* Ajuste do espaço entre logo e subtítulo na versão mobile */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 4px; /* Reduzir o gap na versão mobile para manter o alinhamento */
+  }
+
+  .logo__cabecalho {
+    font-size: 80px; /* Ajustar o tamanho da logo para dispositivos menores */
+  }
 }
 
 .subtitulo {
