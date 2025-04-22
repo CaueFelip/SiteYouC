@@ -72,7 +72,7 @@ body {
 }
 
 .imagem-estudante {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -99,11 +99,11 @@ body {
 
 .Na_youc {
   font-family: "Montserrat", sans-serif;
-  font-size: 4em;
+  font-size: 2.5em;
   color: white;
   text-align: left;
-  padding-left: 50px;
-  padding-top: 150px;
+  padding-left: 30px;
+  padding-top: 50px;
   letter-spacing: 2px;
   line-height: 1.2;
   font-weight: 600;
@@ -124,14 +124,15 @@ body {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
 }
 
 .card {
-  width: 250px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 20px;
-  padding: 30px 20px;
+  padding: 20px;
   color: #fff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -190,10 +191,10 @@ body {
 }
 
 .motivos-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
-  justify-items: center;
+  justify-content: center;
 }
 
 .motivo {
@@ -201,6 +202,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s ease;
+  flex: 1 1 200px; /* Faz os motivos ocuparem o mesmo espaço */
 }
 
 .motivo:hover {
@@ -229,6 +231,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .nova-secao {
   display: flex;
@@ -265,11 +268,11 @@ body {
 
 .titulo-esquerdo {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   line-height: 1.3;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
